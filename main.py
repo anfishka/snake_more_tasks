@@ -42,12 +42,12 @@
 #         tmp_matrix.append(fill_in_arr)
 #     matrix_nXn.append(tmp_matrix)
 #
-# if len(matrix_nXn) == len_matrix and len_of_matrix > 1:
+# if len(matrix_nXn) == len_matrix and len_matrix > 1:
 #     for i in matrix_nXn:
 #         print(i)
 # else:
 #     print("Check length of your matrix!")
-#
+
 
  # 4) Принять у пользователя матрицу произвольного размера и посчитать сумму всех значений
 
@@ -75,89 +75,102 @@
 # matrix_nXn = []
 # len_of_matrix = abs(int(input("Enter length of matrix -> ")))
 # sum_val_col = 0
-# 
+#
 # for i in range(len_of_matrix):
 #     tmp_arr = []
 #     for j in range(len_of_matrix):
 #         tmp_arr_val = abs(int(input("Enter values -> ")))
 #         tmp_arr.append(tmp_arr_val)
 #     matrix_nXn.append(tmp_arr)
-# 
-# print("Your matrix -> ")
-# for i in matrix_nXn:
-#     print(i)
-# print("Your sum of each col in matrix -> ")
-# for i in range(len(matrix_nXn)):
-#     col_sum = 0
-#     for j in range(len(matrix_nXn)):
-#         col_sum += matrix_nXn[j][i]
-#     if matrix_nXn == len_of_matrix and len_of_matrix > 1:
-#         print([col_sum], end=" ")
 #
-#
-# # 6) Принять у пользователя матрицу произвольного размера и посчитать сумму по каждой строке
-#
-# # matrix = [[1,2],[3,4]]
+# if len(matrix_nXn) == len_of_matrix and len_of_matrix > 1:
+#     print("Your matrix -> ")
+#     for i in matrix_nXn:
+#         print(i)
+#     print("Your sum of each col in matrix -> ")
+#     for i in range(len(matrix_nXn)):
+#         col_sum = 0
+#         for j in range(len(matrix_nXn)):
+#             col_sum += matrix_nXn[j][i]
+#         if matrix_nXn == len_of_matrix and len_of_matrix > 1:
+#             print([col_sum], end=" ")
+# else:
+#     print("Check length of matrix!")
 # #
-# # print("Your matrix -> ")
-# # for i in matrix:
-# #     print(i)
-# # print("Your sum of each row in matrix -> ")
-# # for col in range(len(matrix)):
-# #     col_sum = 0
-# #     for row in range(len(matrix)):
-# #         col_sum += matrix[col][row]
-# #
-# #     print([col_sum], end=" ")
+# 6) Принять у пользователя матрицу произвольного размера и посчитать сумму по каждой строке
 #
-# # 7) Принять у пользователя матрицу произвольного размера и посчитать сумму по каждой из диагоналей
-# # matrix = [[1,2],[3,4]]
 #
-# # print("Your matrix -> ")
-# # for i in matrix:
-# #     print(i)
-# # print("Your sum of each row in matrix -> ")
-# # for col in range(len(matrix)):
-# #     col_sum = 0
-# #     for row in range(len(matrix)):
-# #         col_sum += matrix[col][row]
-# #
-# #     print([col_sum], end=" ")
+# matrix_nXn = []
+# len_of_matrix = abs(int(input("Enter length of matrix -> ")))
 #
-# matrix = [[1,2,5],[2,3,4],[6,8,9]]
+# for i in range(len_of_matrix):
+#     tmp_arr = []
+#     for j in range(len_of_matrix):
+#         tmp_arr_val = abs(int(input("Enter values -> ")))
+#         tmp_arr.append(tmp_arr_val)
+#     matrix_nXn.append(tmp_arr)
+# if len(matrix_nXn) == len_of_matrix and len_of_matrix > 1:
+#     print("Your matrix -> ")
+#     for i in matrix_nXn:
+#         print(i)
+#     print("Your sum of each row in matrix -> ")
+#     for i in range(len(matrix_nXn)):
+#         row_sum = 0
+#         for j in range(len(matrix_nXn)):
+#             row_sum += matrix_nXn[i][j]
+#         print([row_sum], end=" ")
+# else:
+#     print("Check length of your matrix")
+#
+# 7) Принять у пользователя матрицу произвольного размера и посчитать сумму по каждой из диагоналей
+
+# matrix_nXn = []
+# len_of_matrix = abs(int(input("Enter length of matrix -> ")))
+#
+# for i in range(len_of_matrix):
+#     tmp_arr = []
+#     for j in range(len_of_matrix):
+#         tmp_arr_val = abs(int(input("Enter values -> ")))
+#         tmp_arr.append(tmp_arr_val)
+#     matrix_nXn.append(tmp_arr)
+#
 # sum_val_diagonal_m = 0
 # sum_val_diagonal_s = 0
 # sum_val_diagonal_h = 0
 # sum_val_diagonal_v = 0
 #
-# for i in range(len(matrix)):
-#     for j in range(len(matrix)):
+# for i in range(len(matrix_nXn)):
+#     for j in range(len(matrix_nXn)):
 #         if j == i :
-#             sum_val_diagonal_m += matrix[i][j]
-#         if  i == len(matrix) - j - 1:
-#             sum_val_diagonal_s += matrix[i][j]
-#         if i == len(matrix) // 2:
-#             sum_val_diagonal_h += matrix[i][j]
-#         if j == len(matrix) // 2:
-#            sum_val_diagonal_v += matrix[i][j]
+#             sum_val_diagonal_m += matrix_nXn[i][j]
+#         if  i == len(matrix_nXn) - j - 1:
+#             sum_val_diagonal_s += matrix_nXn[i][j]
+#         if i == len(matrix_nXn) // 2:
+#             sum_val_diagonal_h += matrix_nXn[i][j]
+#         if j == len(matrix_nXn) // 2:
+#            sum_val_diagonal_v += matrix_nXn[i][j]
 #
-# print("Your matrix -> ")
-# for i in matrix:
-#     print(i)
-# print("Sum of values in main diagonal -> " + str(sum_val_diagonal_m) + "\nSum of values in main diagonal -> " + str(sum_val_diagonal_s) + "\nSum of values in horizontal diagonal -> " + str(sum_val_diagonal_h)+ "\nSum of values in vertical diagonal -> " + str(sum_val_diagonal_v))
-#
+# if len(matrix_nXn) == len_of_matrix and len_of_matrix > 1:
+#     print("Your matrix -> ")
+#     for i in matrix_nXn:
+#         print(i)
+#     print("Sum of values in main diagonal -> " + str(sum_val_diagonal_m) + "\nSum of values in main diagonal -> " + str(sum_val_diagonal_s) + "\nSum of values in horizontal diagonal -> " + str(sum_val_diagonal_h)+ "\nSum of values in vertical diagonal -> " + str(sum_val_diagonal_v))
+# else:
+#     print("Check your length of matrix!")
 
 # 8) Вывести матрицу 10 на 10 заполненую символом * по границам
-
-# MATRIX_SIZE = 10
 #
-# for i in range(MATRIX_SIZE):
-#     for j in range(MATRIX_SIZE):
-#         if i == 0 or j == 0 or i == MATRIX_SIZE - 1 and j < MATRIX_SIZE or j == MATRIX_SIZE - 1 and i < MATRIX_SIZE :
-#             print("*", end=" ")
-#         else:
-#             print(" ", end=" ")
-#     print()
+# MATRIX_SIZE = 10
+# if MATRIX_SIZE == 10:
+#     for i in range(MATRIX_SIZE):
+#         for j in range(MATRIX_SIZE):
+#             if i == 0 or j == 0 or i == MATRIX_SIZE - 1 and j < MATRIX_SIZE or j == MATRIX_SIZE - 1 and i < MATRIX_SIZE :
+#                 print("*", end=" ")
+#             else:
+#                 print(" ", end=" ")
+#         print()
+# else:
+#     print("Check your length of matrix!")
 
 # 9-12 Написать игру
 # Суть в том, что появляется игровое поле 10 на 10 символов заполненное внутри пробелом, а внешне - *
@@ -272,4 +285,5 @@
 #         DEFEATED_ENEMIES = 0
 #         PLAYER_MOVES = 5
 #         create_enemies()
+
 
